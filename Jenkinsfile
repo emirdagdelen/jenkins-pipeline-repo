@@ -1,6 +1,6 @@
 pipeline {
   agent {
-      docker { image 'gradle:8.7-jdk17' }  // içinde Gradle+JDK var
+      dockerfile true
     }
 
   environment {
