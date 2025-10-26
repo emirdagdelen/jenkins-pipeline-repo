@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+      docker { image 'gradle:8.7-jdk17' }  // içinde Gradle+JDK var
+    }
 
   environment {
     IMAGENAME = 'cloud-orchestration/aiorch'   // image adını burada ver
