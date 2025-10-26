@@ -13,7 +13,7 @@ pipeline {
 
         // Wrapper varsa bunu kullan; yoksa yukarıdaki GRADLE_HOME yolunu aç
         script {
-          def status = sh(script: './gradlew build', returnStatus: true)
+          def status = sh(script: 'gradle build', returnStatus: true)
           if (status != 0) {
             error 'Compile işlemi başarısız oldu. Build durduruluyor.'
           }
